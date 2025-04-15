@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Fertilizer Optimizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Fertilizer Optimizer</h2>
+    <form id="optimizerForm">
+      <label for="crop">Select Crop:</label>
+      <select id="crop" required>
+        <option value="" disabled selected>Select a crop</option>
+        <option value="Wheat">Wheat</option>
+        <option value="Rice">Rice</option>
+        <option value="Maize">Maize</option>
+        <option value="Cotton">Cotton</option>
+        <option value="Tomato">Tomato</option>
+        <option value="Groundnut">Groundnut</option>
+        <option value="Soybean">Soybean</option>
+        <option value="Sugarcane">Sugarcane</option>
+      </select>
+
+      <label for="soil">Select Soil Type:</label>
+      <select id="soil" required>
+        <option value="" disabled selected>Select soil type</option>
+        <option value="Alluvial Soil">Alluvial Soil</option>
+        <option value="Black Soil">Black Soil</option>
+        <option value="Red Soil">Red Soil</option>
+        <option value="Clay Soil">Clay Soil</option>
+        <option value="Sandy Soil">Sandy Soil</option>
+        <option value="Loamy Soil">Loamy Soil</option>
+        <option value="Laterite Soil">Laterite Soil</option>
+      </select>
+
+      <input type="number" id="area" placeholder="Land Area (in acres)" required />
+      <button type="submit">Optimize</button>
+    </form>
+
+    <div id="result"></div>
+
+    <h3 style="margin-top: 30px;">📝 Optimization History</h3>
+    <ul id="history" style="margin-top: 10px; list-style: none; padding-left: 0;"></ul>
+  </div>
+ 
+ <!-- In dashboard.html -->
+<div class="topbar">
+    <div class="user-info">
+      <img src="https://img.icons8.com/ios-filled/50/2d6a4f/user.png" alt="User" class="user-icon" />
+      <div class="username" id="usernameDisplay"></div> <!-- Here we will display the name -->
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
